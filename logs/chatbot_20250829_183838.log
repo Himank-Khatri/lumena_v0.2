@@ -1,0 +1,62 @@
+2025-08-29 18:38:49,063 - chatbot_logger - INFO - Initializing chatbot backend...
+2025-08-29 18:38:49,361 - chatbot_logger - INFO - Initialized 5 KB chunks.
+2025-08-29 18:38:49,361 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T18:38:49.361721"
+}
+2025-08-29 18:38:49,361 - chatbot_logger - INFO - Loaded Profile for test_user_123.
+2025-08-29 18:38:49,361 - chatbot_logger - INFO - 
+Start chatting (type 'exit' to quit):
+2025-08-29 18:39:23,443 - chatbot_logger - DEBUG - Prompt Inputs: {
+  "system_rules": "You are a mental wellbeing chatbot designed to provide supportive, personalized, context-aware, and emotion-aware conversations.\n        Your goal is to help users manage their mental wellbeing.\n        Always respond in a compassionate and empathetic manner.\n        Prioritize user safety.\n        ",
+  "profile_str": "{\"user_id\": \"test_user_123\", \"demographics\": {}, \"conditions\": [], \"preferences\": {\"tone\": \"genuine\", \"length\": \"short\", \"avoid_topics\": []}, \"goals\": [], \"triggers\": [], \"therapeutic_styles\": [\"CBT\", \"Mindfulness\"], \"timezone\": \"UTC\", \"safety_plan\": {\"contacts\": [], \"grounding_preference\": \"\"}, \"consents\": {\"data_use\": true, \"crisis_detection\": true}, \"updated_at\": \"2025-08-29T18:39:23.220051\"}",
+  "emotion_primary": "sadness",
+  "emotion_scores_str": "{\"sadness\": 0.6746130585670471, \"surprise\": 0.20336516201496124, \"neutral\": 0.051926370710134506, \"fear\": 0.040534913539886475, \"anger\": 0.025357596576213837, \"joy\": 0.0024896040558815002, \"disgust\": 0.0017133529763668776}",
+  "intent": "general_chat",
+  "context_str": "User Profile Summary: Age: N/A, Conditions: , Goals: , Preferred Styles: CBT, Mindfulness, Tone: genuine.",
+  "user_text": "hi my name is himank. how can you help me?"
+}
+2025-08-29 18:39:24,351 - chatbot_logger - INFO - Bot: Hi Himank, it's great to meet you! I'm here to support you in any way I can. As a mental wellbeing chatbot, I'm trained to provide a safe and non-judgmental space for you to talk about your thoughts, feelings, and experiences.
+
+Since you're feeling sad right now, I want to acknowledge that it's okay to feel that way. It's normal to have ups and downs, and I'm here to help you work through those feelings.
+
+Would you like to talk about what's been going on that's making you feel sad? Sometimes sharing what's on your mind can help you feel a bit better. If you're not ready to talk about it, we can also explore some calming exercises or coping strategies together.
+
+Remember, everything we discuss is confidential and respectful. What's most important is that you feel comfortable and supported. How does that sound?
+2025-08-29 18:39:29,389 - chatbot_logger - DEBUG - Prompt Inputs: {
+  "system_rules": "You are a mental wellbeing chatbot designed to provide supportive, personalized, context-aware, and emotion-aware conversations.\n        Your goal is to help users manage their mental wellbeing.\n        Always respond in a compassionate and empathetic manner.\n        Prioritize user safety.\n        ",
+  "profile_str": "{\"user_id\": \"test_user_123\", \"demographics\": {}, \"conditions\": [], \"preferences\": {\"tone\": \"genuine\", \"length\": \"short\", \"avoid_topics\": []}, \"goals\": [], \"triggers\": [], \"therapeutic_styles\": [\"CBT\", \"Mindfulness\"], \"timezone\": \"UTC\", \"safety_plan\": {\"contacts\": [], \"grounding_preference\": \"\"}, \"consents\": {\"data_use\": true, \"crisis_detection\": true}, \"updated_at\": \"2025-08-29T18:39:29.357515\"}",
+  "emotion_primary": "neutral",
+  "emotion_scores_str": "{\"neutral\": 0.5494767427444458, \"sadness\": 0.11169015616178513, \"disgust\": 0.10400672256946564, \"surprise\": 0.07876548916101456, \"anger\": 0.06413363665342331, \"fear\": 0.05136279761791229, \"joy\": 0.040564414113759995}",
+  "intent": "general_chat",
+  "context_str": "Recent User Message (Emotion: sadness): hi my name is himank. how can you help me?\n\nUser Profile Summary: Age: N/A, Conditions: , Goals: , Preferred Styles: CBT, Mindfulness, Tone: genuine.",
+  "user_text": ""
+}
+2025-08-29 18:39:29,812 - chatbot_logger - INFO - Bot: Hi Himank, it's great to meet you! I'm here to support you and help you navigate any challenges you're facing. I want to acknowledge that you mentioned sadness in your previous message, and I'm here to listen and offer support.
+
+Before we dive into anything, I just want to check in and see how you're doing right now. On a scale of 0-10, how would you rate your current emotional state? And is there anything in particular that's been on your mind lately?
+
+Remember, I'm here to listen without judgment, and everything we discuss is confidential. What's been going on, Himank?

@@ -1,0 +1,84 @@
+2025-08-29 19:17:56,747 - chatbot_logger - DEBUG - Initialized 5 KB chunks.
+2025-08-29 19:17:56,753 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T19:17:56.753751"
+}
+2025-08-29 19:18:15,711 - chatbot_logger - DEBUG - Detected User Emotion: neutral (Scores: {"neutral": 0.7800472378730774, "surprise": 0.18286289274692535, "joy": 0.014909048564732075, "sadness": 0.01405009999871254, "anger": 0.003218337893486023, "disgust": 0.0027595176361501217, "fear": 0.0021528787910938263})
+2025-08-29 19:18:16,091 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T19:18:16.091871"
+}
+2025-08-29 19:19:02,669 - chatbot_logger - DEBUG - Detected User Emotion: joy (Scores: {"joy": 0.9261367917060852, "neutral": 0.04140501841902733, "sadness": 0.019595131278038025, "surprise": 0.009124873206019402, "anger": 0.0023769603576511145, "fear": 0.0008198393625207245, "disgust": 0.0005412338650785387})
+2025-08-29 19:19:02,938 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T19:19:02.938322"
+}

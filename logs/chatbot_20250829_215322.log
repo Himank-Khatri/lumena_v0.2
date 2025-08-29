@@ -1,0 +1,96 @@
+2025-08-29 21:53:34,791 - chatbot_logger - DEBUG - Initialized 5 KB chunks.
+2025-08-29 21:53:34,791 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T21:53:34.791948"
+}
+2025-08-29 21:53:38,846 - chatbot_logger - DEBUG - Detected User Emotion: neutral (Scores: {"neutral": 0.5002423524856567, "surprise": 0.4555504322052002, "sadness": 0.016911009326577187, "joy": 0.01478555891662836, "disgust": 0.00526770856231451, "anger": 0.0041102138347923756, "fear": 0.0031327661126852036})
+2025-08-29 21:53:39,843 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T21:53:39.843591"
+}
+2025-08-29 21:53:54,298 - chatbot_logger - DEBUG - Detected User Emotion: sadness (Scores: {"sadness": 0.9933777451515198, "joy": 0.0020141745917499065, "surprise": 0.001666068914346397, "neutral": 0.0013113904278725386, "anger": 0.0007092159357853234, "fear": 0.0004939307109452784, "disgust": 0.0004275241808500141})
+2025-08-29 21:53:55,476 - chatbot_logger - DEBUG - Profile Update: Added new condition 'depression' for user test_user_123.
+2025-08-29 21:53:55,476 - chatbot_logger - DEBUG - Profile Update: Added new condition 'anxiety' for user test_user_123.
+2025-08-29 21:53:55,492 - chatbot_logger - INFO - User test_user_123 profile updated with new goals/conditions.
+2025-08-29 21:53:55,995 - chatbot_logger - DEBUG - Profile Update: Added new avoid topic 'sadness' for user test_user_123 due to negative emotion.
+2025-08-29 21:53:55,995 - chatbot_logger - DEBUG - Profile Update: Added new avoid topic 'distress' for user test_user_123 due to negative emotion.
+2025-08-29 21:53:55,995 - chatbot_logger - INFO - User test_user_123 profile updated with new avoid topics: ['distress', 'sadness']
+2025-08-29 21:53:55,995 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [
+    "anxiety",
+    "depression"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": [
+      "distress",
+      "sadness"
+    ]
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T21:53:55.995152"
+}

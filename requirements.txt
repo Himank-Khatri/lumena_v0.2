@@ -1,0 +1,13 @@
+langchain
+huggingface_hub[hf_xet]
+faiss-cpu
+sentence-transformers
+transformers
+torch
+python-dotenv
+scikit-learn
+numpy
+scipy
+groq
+langchain-groq
+toml

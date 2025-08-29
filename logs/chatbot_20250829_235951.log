@@ -1,0 +1,33 @@
+2025-08-30 00:00:00,601 - chatbot_logger - INFO - Initializing chatbot backend...
+2025-08-30 00:00:00,789 - chatbot_logger - DEBUG - Initialized 5 KB chunks.
+2025-08-30 00:00:00,790 - chatbot_logger - INFO - KB chunks initialized/re-initialized.
+2025-08-30 00:00:00,801 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [
+    "anxiety",
+    "surprised"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:56:11.473207"
+}

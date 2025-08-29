@@ -1,0 +1,37 @@
+2025-08-29 23:37:51,847 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [
+    "anxiety",
+    "depression",
+    "sadness"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": [
+      "sadness"
+    ]
+  },
+  "goals": [
+    "prioritizing mental wellbeing",
+    "taking the first step towards mental wellbeing",
+    "feeling better"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:32:41.040498"
+}

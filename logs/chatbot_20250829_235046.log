@@ -1,0 +1,63 @@
+2025-08-29 23:50:57,516 - chatbot_logger - INFO - Existing vector store cleared based on metadata.json presence.
+2025-08-29 23:50:57,516 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": [
+      "sadness"
+    ]
+  },
+  "goals": [
+    "feeling better"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T21:58:47.217922"
+}
+2025-08-29 23:51:17,565 - chatbot_logger - DEBUG - Detected User Emotion: neutral (Scores: {"neutral": 0.6487919092178345, "surprise": 0.2859741449356079, "sadness": 0.026308510452508926, "joy": 0.02116825059056282, "fear": 0.0076522366143763065, "anger": 0.006251455284655094, "disgust": 0.0038535096682608128})
+2025-08-29 23:51:18,497 - chatbot_logger - ERROR - Error during LLM-based goal/condition extraction: Error code: 400 - {'error': {'message': "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '/tool-use\n{\n  "tool_call": {\n    "id": "pending",\n    "type": "function",\n    "function": {\n      "name": "GoalConditionExtraction"\n    },\n    "parameters": {\n      "conditions": [],\n      "goals": []\n    }\n  }\n}/tool-use'}}
+2025-08-29 23:51:18,497 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [
+    "feeling better"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T21:58:47.217922"
+}

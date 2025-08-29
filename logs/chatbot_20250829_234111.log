@@ -1,0 +1,75 @@
+2025-08-29 23:41:21,938 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [
+    "anxiety",
+    "depression",
+    "sadness"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": [
+      "sadness"
+    ]
+  },
+  "goals": [
+    "prioritizing mental wellbeing",
+    "taking the first step towards mental wellbeing",
+    "feeling better"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:32:41.040498"
+}
+2025-08-29 23:42:59,378 - chatbot_logger - DEBUG - Detected User Emotion: surprise (Scores: {"surprise": 0.5912309288978577, "neutral": 0.36003270745277405, "joy": 0.02212667092680931, "sadness": 0.01895271986722946, "anger": 0.003059570211917162, "fear": 0.002730763517320156, "disgust": 0.0018666069954633713})
+2025-08-29 23:43:01,160 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [
+    "anxiety",
+    "depression",
+    "sadness"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": [
+      "sadness"
+    ]
+  },
+  "goals": [
+    "prioritizing mental wellbeing",
+    "taking the first step towards mental wellbeing",
+    "feeling better"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:32:41.040498"
+}
