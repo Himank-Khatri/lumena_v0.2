@@ -31,8 +31,9 @@ class Chatbot:
     def __init__(self):
         self.message_history = {} # Stores recent messages for context
 
-    def _load_recent_messages(self, user_id: str, k: int = 12) -> List[Dict[str, Any]]:
+    def _load_recent_messages(self, user_id: str) -> List[Dict[str, Any]]:
         """Loads recent messages for a user."""
+        k = config.get("chatbot.recent_messages_k", 12)
         return self.message_history.get(user_id, [])[-k:]
 
     def _log_turn(self, user_id: str, user_text: str, emo: dict, intent: str, context: List[Dict[str, Any]], assistant_response: str):
@@ -85,11 +86,11 @@ class Chatbot:
 
     def _score_chunk(self, q_embed_sem: List[float], q_embed_em: List[float], p_tags: List[str], chunk: Dict[str, Any], profile: Dict[str, Any]) -> float:
         """Scores a retrieved chunk based on semantic, emotion, profile tags, recency, and style match."""
-        w_sem = 0.55
-        w_em = 0.2
-        w_prof = 0.1
-        w_rec = 0.1
-        w_sft = 0.05
+        w_sem = config.get("scoring_weights.semantic", 0.55)
+        w_em = config.get("scoring_weights.emotion", 0.2)
+        w_prof = config.get("scoring_weights.profile_match", 0.1)
+        w_rec = config.get("scoring_weights.recency", 0.1)
+        w_sft = config.get("scoring_weights.style_match", 0.05)
 
         # Semantic similarity
         s_sem = cosine_similarity_score(q_embed_sem, chunk["embeddings"]["semantic"])
@@ -134,15 +135,15 @@ class Chatbot:
         """Assembles the context window for the LLM prompt."""
         context_parts = []
 
-        # 2-3 KB chunks (max 800-1200 tokens)
-        # Sort by score and take top 3
-        sorted_chunks = sorted(rescored_chunks, key=lambda x: x[0], reverse=True)[:3]
+        # KB chunks
+        num_kb_chunks = config.get("chatbot.num_kb_chunks_in_context", 3)
+        sorted_chunks = sorted(rescored_chunks, key=lambda x: x[0], reverse=True)[:num_kb_chunks]
         for score, chunk in sorted_chunks:
             context_parts.append(f"Knowledge Base Chunk (Score: {score:.2f}, Source: {chunk.get('source')}): {chunk['text']}")
 
-        # 2 recent user turns exhibiting current emotion (simplified to just recent turns for now)
-        # In a real system, you'd filter for emotion. For now, just take the last 2 user messages.
-        recent_user_messages = [msg for msg in prior_messages if msg["role"] == "user"][-2:]
+        # Recent user turns
+        num_recent_user_messages = config.get("chatbot.num_recent_user_messages_in_context", 2)
+        recent_user_messages = [msg for msg in prior_messages if msg["role"] == "user"][-num_recent_user_messages:]
         for msg in recent_user_messages:
             context_parts.append(f"Recent User Message (Emotion: {msg['emotion']['primary']}): {msg['text']}")
 
@@ -330,7 +331,8 @@ class Chatbot:
         p_tags = profile_manager.profile_tags(profile)
         
         filters = profile_manager.profile_filters(profile)
-        cands = vector_store.vector_search(q_embed_sem, q_embed_em, filters=filters, top_k=50)
+        top_k_vector_search = config.get("chatbot.top_k_vector_search", 20)
+        cands = vector_store.vector_search(q_embed_sem, q_embed_em, filters=filters, top_k=top_k_vector_search)
 
         rescored = []
         for c in cands:
