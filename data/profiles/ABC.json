@@ -1,0 +1,36 @@
+{
+  "user_id": "ABC",
+  "demographics": {},
+  "conditions": [
+    "Anxiety"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": [
+      "financial loss",
+      "fear of losing money",
+      "distress",
+      "anxiety"
+    ]
+  },
+  "goals": [
+    "Financial security",
+    "Avoiding financial loss"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-30T10:18:21.897947"
+}

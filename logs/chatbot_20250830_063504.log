@@ -1,0 +1,61 @@
+2025-08-30 06:35:17,813 - chatbot_logger - INFO - Initializing chatbot backend...
+2025-08-30 06:35:17,814 - chatbot_logger - INFO - metadata.json found. Clearing existing vector store before re-initialization.
+2025-08-30 06:35:17,814 - chatbot_logger - INFO - Vector store cleared.
+2025-08-30 06:35:17,815 - chatbot_logger - INFO - Existing vector store cleared based on metadata.json presence.
+2025-08-30 06:35:18,055 - chatbot_logger - DEBUG - Initialized 5 KB chunks.
+2025-08-30 06:35:18,055 - chatbot_logger - INFO - KB chunks initialized/re-initialized.
+2025-08-30 06:35:18,056 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:56:11.473207"
+}
+2025-08-30 06:35:24,768 - chatbot_logger - DEBUG - Detected User Emotion: neutral (Scores: {"neutral": 0.5346279144287109, "surprise": 0.3191779851913452, "joy": 0.07114996016025543, "sadness": 0.05931621417403221, "anger": 0.007929418236017227, "disgust": 0.004437397234141827, "fear": 0.0033610782120376825})
+2025-08-30 06:35:25,448 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:56:11.473207"
+}

@@ -1,0 +1,31 @@
+{
+  "user_id": "HIMANK",
+  "demographics": {},
+  "conditions": [
+    "anxiety"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [
+    "project presentation",
+    "public speaking"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-30T09:22:49.307625"
+}

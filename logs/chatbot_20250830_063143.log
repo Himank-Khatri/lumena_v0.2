@@ -1,0 +1,61 @@
+2025-08-30 06:31:56,359 - chatbot_logger - INFO - Initializing chatbot backend...
+2025-08-30 06:31:56,359 - chatbot_logger - INFO - metadata.json found. Clearing existing vector store before re-initialization.
+2025-08-30 06:31:56,360 - chatbot_logger - INFO - Vector store cleared.
+2025-08-30 06:31:56,360 - chatbot_logger - INFO - Existing vector store cleared based on metadata.json presence.
+2025-08-30 06:31:56,564 - chatbot_logger - DEBUG - Initialized 5 KB chunks.
+2025-08-30 06:31:56,564 - chatbot_logger - INFO - KB chunks initialized/re-initialized.
+2025-08-30 06:31:56,565 - chatbot_logger - DEBUG - Loaded Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:56:11.473207"
+}
+2025-08-30 06:32:04,049 - chatbot_logger - DEBUG - Detected User Emotion: fear (Scores: {"fear": 0.9941297769546509, "sadness": 0.0020339852198958397, "surprise": 0.001209651934914291, "joy": 0.0007985634147189558, "neutral": 0.0007900414639152586, "anger": 0.0007783558685332537, "disgust": 0.00025976577308028936})
+2025-08-30 06:32:05,427 - chatbot_logger - DEBUG - Updated Profile for test_user_123:
+{
+  "user_id": "test_user_123",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-29T23:56:11.473207"
+}

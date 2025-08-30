@@ -1,5 +1,7 @@
 import uuid
+import uuid
 import os # Import os module
+import argparse # Import argparse for command-line arguments
 from src.core.chatbot import Chatbot
 from src.core.profile_manager import ProfileManager
 from src.core.vector_store import vector_store
@@ -60,6 +62,13 @@ def initialize_kb_chunks():
 
 def main():
     logger.info("Initializing chatbot backend...")
+
+    # Argument parsing
+    parser = argparse.ArgumentParser(description="Lumena Chatbot")
+    parser.add_argument("--user_id", type=str, default="default_user",
+                        help="Specify a user ID to load or create a profile.")
+    args = parser.parse_args()
+    
     # Check if metadata.json exists
     if os.path.exists(vector_store.metadata_path):
         logger.info("metadata.json found. Clearing existing vector store before re-initialization.") # Reverted to print
@@ -73,7 +82,7 @@ def main():
     chatbot = Chatbot()
     profile_manager = ProfileManager(profile_dir=config.get("general.profile_dir"))
 
-    user_id = "test_user_123"
+    user_id = args.user_id
     
     # Create a default profile or load existing one
     profile = profile_manager.load_profile(user_id)

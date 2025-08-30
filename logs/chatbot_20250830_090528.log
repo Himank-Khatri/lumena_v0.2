@@ -1,0 +1,64 @@
+2025-08-30 09:05:41,369 - chatbot_logger - INFO - Initializing chatbot backend...
+2025-08-30 09:05:41,369 - chatbot_logger - INFO - metadata.json found. Clearing existing vector store before re-initialization.
+2025-08-30 09:05:41,369 - chatbot_logger - INFO - Vector store cleared.
+2025-08-30 09:05:41,369 - chatbot_logger - INFO - Existing vector store cleared based on metadata.json presence.
+2025-08-30 09:05:41,526 - chatbot_logger - DEBUG - Initialized 5 KB chunks.
+2025-08-30 09:05:41,526 - chatbot_logger - INFO - KB chunks initialized/re-initialized.
+2025-08-30 09:05:41,526 - chatbot_logger - DEBUG - Loaded Profile for default_user:
+{
+  "user_id": "default_user",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-30T09:05:41.526235"
+}
+2025-08-30 09:08:31,559 - chatbot_logger - DEBUG - Detected User Emotion: neutral (Scores: {"neutral": 0.6487919092178345, "surprise": 0.2859741449356079, "sadness": 0.026308510452508926, "joy": 0.02116825059056282, "fear": 0.0076522366143763065, "anger": 0.006251455284655094, "disgust": 0.0038535096682608128})
+2025-08-30 09:08:32,051 - chatbot_logger - INFO - User Query (default_user): hi im himank
+2025-08-30 09:08:32,051 - chatbot_logger - INFO - Assistant Response (default_user): Hi Himank! It's nice to chat with you. How's your day been so far? Anything on your mind that you'd like to talk about or share? I'm here to listen and offer support if you need it.
+2025-08-30 09:08:32,301 - chatbot_logger - DEBUG - No profile updates detected for user default_user this turn.
+2025-08-30 09:08:32,301 - chatbot_logger - DEBUG - Updated Profile for default_user:
+{
+  "user_id": "default_user",
+  "demographics": {},
+  "conditions": [],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": []
+  },
+  "goals": [],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-08-30T09:08:32.301162"
+}

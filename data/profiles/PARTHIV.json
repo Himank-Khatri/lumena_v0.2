@@ -1,31 +1,30 @@
 {
-  "user_id": "test_user_123",
+  "user_id": "PARTHIV",
   "demographics": {},
   "conditions": [
+    "stress",
+    "negative self-talk",
     "anxiety",
-    "surprise",
-    "Apprehension",
-    "Uncertainty"
+    "low self-esteem"
   ],
   "preferences": {
     "tone": "genuine",
     "length": "short",
     "avoid_topics": [
-      "bad marks",
-      "academic performance",
-      "failure",
       "anxiety",
-      "interview",
-      "bad numbers",
-      "fear of failure"
+      "failure",
+      "mental health",
+      "distress",
+      "mistake",
+      "frustration"
     ]
   },
   "goals": [
-    "prepare for interview",
-    "manage anxiety",
-    "performance",
-    "avoiding negative self-talk",
-    "Clarify unknown or uncertain situations"
+    "presentation_today",
+    "improve self-perception",
+    "build confidence",
+    "disappointment",
+    "failure"
   ],
   "triggers": [],
   "therapeutic_styles": [
@@ -41,5 +40,5 @@
     "data_use": true,
     "crisis_detection": true
   },
-  "updated_at": "2025-08-30T09:03:24.225291"
+  "updated_at": "2025-08-30T10:13:49.682347"
 }

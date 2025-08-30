@@ -56,6 +56,7 @@ class Chatbot:
             "safety_flags": screen_safety(user_text, emo) # Re-screen for logging
         }
         self.message_history[user_id].append(user_message)
+        logger.info(f"User Query ({user_id}): {user_text}")
 
         assistant_message = {
             "msg_id": str(uuid.uuid4()),
@@ -70,6 +71,7 @@ class Chatbot:
             "safety_flags": {"self_harm": 0.0} # Assuming LLM output is safe after refinement
         }
         self.message_history[user_id].append(assistant_message)
+        logger.info(f"Assistant Response ({user_id}): {assistant_response}")
         # Flush file handler to ensure immediate writing to log file
         for handler in logger.handlers:
             if isinstance(handler, logging.FileHandler):
@@ -226,14 +228,15 @@ class Chatbot:
         # Option 2: LLM-Based Goal/Condition Extraction
         extraction_prompt = ChatPromptTemplate.from_messages([
             ("system", """You are an expert in extracting mental wellbeing goals and conditions from conversation.
-            Analyze the user's message and the assistant's response to identify any new, explicit mental wellbeing goals or conditions mentioned by the user.
+            Analyze *only the user's message* to identify any new, explicit mental wellbeing goals or conditions directly stated by the user.
+            Do not infer goals or conditions from the assistant's response or general conversational prompts.
             """),
-            ("human", "User message: {user_text}\nAssistant response: {assistant_response}")
+            ("human", "User message: {user_text}")
         ])
         extraction_chain = extraction_prompt | llm.with_structured_output(GoalConditionExtraction)
 
         try:
-            extraction_result: GoalConditionExtraction = extraction_chain.invoke({"user_text": user_text, "assistant_response": assistant_response})
+            extraction_result: GoalConditionExtraction = extraction_chain.invoke({"user_text": user_text})
             
             new_goals = extraction_result.goals
             new_conditions = extraction_result.conditions
@@ -308,13 +311,16 @@ class Chatbot:
         
         # Apply the aggregated patch if any updates occurred
         if profile_updated_this_turn:
+            logger.debug(f"Final profile_patch for user {user_id}: {json.dumps(profile_patch, indent=2)}")
             profile_manager.upsert_profile(user_id, profile_patch)
             logger.info(f"User {user_id} profile updated with aggregated changes: {profile_patch}")
+        else:
+            logger.debug(f"No profile updates detected for user {user_id} this turn.")
 
     def handle_turn(self, user_id: str, user_text: str) -> str:
         """Handles a single turn of the chatbot conversation."""
         profile = profile_manager.load_profile(user_id)
-        prior_messages = self._load_recent_messages(user_id, k=12)
+        prior_messages = self._load_recent_messages(user_id)
 
         emo = classify_emotion(user_text)
         logger.debug(f"Detected User Emotion: {emo['primary']} (Scores: {json.dumps(emo['scores'])})")

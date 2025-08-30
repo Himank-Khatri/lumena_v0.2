@@ -22,9 +22,9 @@ def setup_logging(log_dir=config.get("general.log_dir")):
     file_handler.setFormatter(file_formatter)
     logger.addHandler(file_handler)
 
-    # Create console handler with a higher log level (e.g., WARNING)
+    # Create console handler with a higher log level (e.g., CRITICAL) to suppress errors from CLI
     console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.WARNING)
+    console_handler.setLevel(logging.CRITICAL) # Changed to CRITICAL to suppress ERROR from console
     console_formatter = logging.Formatter('%(levelname)s - %(message)s')
     console_handler.setFormatter(console_formatter)
     logger.addHandler(console_handler)
