@@ -1,6 +1,6 @@
 [
   {
-    "doc_id": "dd9c3293-8270-421d-90d9-2ccad3d41bbe",
+    "doc_id": "30a0aaa2-8d64-4ddb-9d76-3131d4ee6742",
     "source": "CBT_Basics",
     "text": "Cognitive Behavioral Therapy (CBT) helps you identify and change negative thinking patterns.",
     "meta": {
@@ -9,10 +9,10 @@
       "audience": "adult",
       "style": "informative"
     },
-    "updated_at": "2025-08-30T10:16:35.699791"
+    "updated_at": "2025-09-24T10:10:15.474421"
   },
   {
-    "doc_id": "dc61cd0c-f5c7-411f-bdd2-e642358f8d40",
+    "doc_id": "f3e17e19-d7ae-48e2-b5e1-5e3cb49c5781",
     "source": "Mindfulness_Guide",
     "text": "Mindfulness involves focusing on the present moment without judgment. Try a 5-minute breathing exercise.",
     "meta": {
@@ -21,10 +21,10 @@
       "audience": "adult",
       "style": "gentle"
     },
-    "updated_at": "2025-08-30T10:16:35.699791"
+    "updated_at": "2025-09-24T10:10:15.474421"
   },
   {
-    "doc_id": "35680db6-20ba-4d9d-a8a8-4bff3922965b",
+    "doc_id": "4e772b52-91ff-4908-b073-177754c03f94",
     "source": "Anxiety_Management",
     "text": "When feeling anxious, try deep breathing exercises. Inhale for 4 counts, hold for 4, exhale for 6.",
     "meta": {
@@ -33,10 +33,10 @@
       "audience": "adult",
       "style": "supportive"
     },
-    "updated_at": "2025-08-30T10:16:35.699791"
+    "updated_at": "2025-09-24T10:10:15.474421"
   },
   {
-    "doc_id": "1dab3561-5048-46dd-b46f-73569d477893",
+    "doc_id": "3ed21aff-5d96-401d-88b1-3d72016c7f6e",
     "source": "ACT_Principles",
     "text": "Acceptance and Commitment Therapy (ACT) encourages psychological flexibility and living by your values.",
     "meta": {
@@ -45,10 +45,10 @@
       "audience": "adult",
       "style": "informative"
     },
-    "updated_at": "2025-08-30T10:16:35.699791"
+    "updated_at": "2025-09-24T10:10:15.474421"
   },
   {
-    "doc_id": "0e209b91-d4e4-4571-8108-82c17d516e70",
+    "doc_id": "9443b6c7-7e99-4b36-9800-26d37dc66d8b",
     "source": "Panic_Attack_Help",
     "text": "During a panic attack, focus on your senses: 5 things you can see, 4 things you can touch, 3 things you can hear, 2 things you can smell, 1 thing you can taste.",
     "meta": {
@@ -57,6 +57,6 @@
       "audience": "adult",
       "style": "direct"
     },
-    "updated_at": "2025-08-30T10:16:35.699791"
+    "updated_at": "2025-09-24T10:10:15.474421"
   }
 ]

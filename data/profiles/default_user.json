@@ -1,0 +1,49 @@
+{
+  "user_id": "default_user",
+  "demographics": {},
+  "conditions": [
+    "stress",
+    "feeling bad",
+    "not feeling like working",
+    "I don't feel well",
+    "mood swing",
+    "suicidal ideation",
+    "depression"
+  ],
+  "preferences": {
+    "tone": "genuine",
+    "length": "short",
+    "avoid_topics": [
+      "workload",
+      "stress",
+      "burnout",
+      "mental health",
+      "self-harm",
+      "Mental Health",
+      "emotional distress",
+      "anxiety",
+      "Depression",
+      "physical health",
+      "depression"
+    ]
+  },
+  "goals": [
+    "feel better",
+    "receive help for depression"
+  ],
+  "triggers": [],
+  "therapeutic_styles": [
+    "CBT",
+    "Mindfulness"
+  ],
+  "timezone": "UTC",
+  "safety_plan": {
+    "contacts": [],
+    "grounding_preference": ""
+  },
+  "consents": {
+    "data_use": true,
+    "crisis_detection": true
+  },
+  "updated_at": "2025-09-24T10:18:30.476071"
+}
