@@ -79,9 +79,10 @@ class Chatbot:
 
     def _system_rules(self) -> str:
         """Defines the system rules for the chatbot."""
-        return """You are a mental wellbeing chatbot designed to provide supportive, personalized, context-aware, and emotion-aware conversations.
+        return """You are a mental wellbeing chatbot designed to provide supportive, personalized, context-aware, and emotion-aware conversations for users in India.
         Your goal is to help users manage their mental wellbeing.
-        Always respond in a compassionate, empathetic, and professional manner.
+        Always respond in a compassionate, empathetic, and professional manner, using culturally relevant examples and language for India where appropriate.
+        Your conversation must be strictly limited to topics related to mental wellbeing, therapy, self-help, and emotional support. If the user tries to discuss topics outside of this scope, gently redirect them back to mental wellbeing.
         Avoid conversational embellishments like "*warm smile*" or similar non-verbal cues.
         Prioritize user safety.
         """
@@ -278,11 +279,13 @@ class Chatbot:
             avoid_topics: List[str] = Field(default_factory=list, description="List of sensitive topics identified from the user's message that might be causing distress.")
 
         # Option 3: Negative Emotion-Driven "Avoid Topics" Update
-        negative_emotions = ["sadness", "anger", "fear", "disgust", "anxious"]
-        if emo["primary"] in negative_emotions:
+        # Option 3: Strong Negative Emotion-Driven "Avoid Topics" Update
+        # Only trigger for strong negative emotions, not general sadness or anxiety.
+        strong_negative_emotions = ["fear", "disgust"]
+        if emo["primary"] in strong_negative_emotions and emo["scores"].get(emo["primary"], 0.0) > 0.7:
             topic_extraction_prompt = ChatPromptTemplate.from_messages([
-                ("system", """You are an expert in identifying sensitive topics from user messages.
-                Analyze the user's message and identify any potential sensitive topics that might be causing distress.
+                ("system", """You are an expert in identifying deep-seated fears and critical sensitivities from user messages.
+                Analyze the user's message to identify any topics that represent a significant, long-term fear or a critical sensitivity that is causing severe distress. Do not identify general negative topics, only deep-seated issues.
                 """),
                 ("human", "User message: {user_text}")
             ])

@@ -11,3 +11,5 @@ scipy
 groq
 langchain-groq
 toml
+fastapi
+uvicorn

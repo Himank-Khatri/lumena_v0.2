@@ -1,26 +1,15 @@
 {
-  "user_id": "HIMANK",
+  "user_id": "123",
   "demographics": {},
   "conditions": [
-    "loneliness",
-    "anxiety",
-    "emptiness",
-    "feeling empty"
+    "anxiety"
   ],
   "preferences": {
     "tone": "genuine",
     "length": "short",
-    "avoid_topics": [
-      "loneliness",
-      "emptiness",
-      "mental health",
-      "depression"
-    ]
+    "avoid_topics": []
   },
-  "goals": [
-    "public speaking",
-    "project presentation"
-  ],
+  "goals": [],
   "triggers": [],
   "therapeutic_styles": [
     "CBT",
@@ -35,5 +24,5 @@
     "data_use": true,
     "crisis_detection": true
   },
-  "updated_at": "2025-09-24T10:53:17.086201"
+  "updated_at": "2025-09-24T11:20:04.560373"
 }
